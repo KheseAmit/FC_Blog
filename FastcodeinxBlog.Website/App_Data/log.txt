@@ -1,0 +1,36 @@
+2014-02-20 15:51:51,356 [9] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.AddBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command AddBlogEntryCommand
+2014-02-20 15:52:19,786 [5] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.UpdateBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command UpdateBlogEntryCommand
+2014-02-20 15:52:30,957 [10] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.UpdateBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command UpdateBlogEntryCommand
+2014-02-20 15:52:39,029 [5] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.DeleteBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command DeleteBlogEntryCommand
+2016-06-20 14:36:30,711 [9] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.AddOrUpdateSingleFeedUserCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command AddOrUpdateSingleFeedUserCommand
+2016-06-20 14:59:52,460 [48] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.AddBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command AddBlogEntryCommand
+2016-06-20 15:01:03,499 [50] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.UpdateBlogEntryCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command UpdateBlogEntryCommand
+2016-06-20 15:01:44,813 [47] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.AddBlogEntryCommentCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command AddBlogEntryCommentCommand
+2016-06-20 15:01:45,758 [47] ERROR FastcodeinxBlog.Website.EmailMessageService [(null)] - Sending email failed
+System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: The remote name could not be resolved: 'mail.yourdomain.de'
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FastcodeinxBlog.Website.EmailMessageService.SendMessage(String sender, String recipient, String replyto, String subject, String body) in d:\Amit_Personal\MyProjects\FastcodeinxBlog.master\FastcodeinxBlog.master\src\FastcodeinxBlog.Website\Code\EmailMessageService.cs:line 63
+2016-06-20 15:01:55,996 [44] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.DeleteCommand`1[[FastcodeinxBlog.Core.Entities.BlogEntryComment, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command DeleteCommand`1
+2016-06-20 15:02:09,077 [52] INFO  FastcodeinxBlog.Core.Commands.CommandLoggingDecorator`1[[FastcodeinxBlog.Core.Commands.AddBlogEntryCommentCommand, FastcodeinxBlog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - Executing command AddBlogEntryCommentCommand
+2016-06-20 15:02:09,319 [52] ERROR FastcodeinxBlog.Website.EmailMessageService [(null)] - Sending email failed
+System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: The remote name could not be resolved: 'mail.yourdomain.de'
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FastcodeinxBlog.Website.EmailMessageService.SendMessage(String sender, String recipient, String replyto, String subject, String body) in d:\Amit_Personal\MyProjects\FastcodeinxBlog.master\FastcodeinxBlog.master\src\FastcodeinxBlog.Website\Code\EmailMessageService.cs:line 63
